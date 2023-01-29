@@ -1,0 +1,26 @@
+{
+  "server": {
+    "port": 8081
+  },
+  "database": {
+    "employees": {
+      "type": "postgres",
+      "postgres": {
+        "url": "postgres://localhost:12345/employees_db"
+      }
+    }
+  },
+  "messaging": {
+    "kafka": {
+      "type": "kafka",
+      "kafka": {
+        "bootstrapServers": "localhost:12345"
+      }
+    }
+  },
+  "emails": [
+    { "name":  "test1", "email": "test1@test.local"},
+    { "name":  "test2", "email": "test2@test.local"},
+    { "name":  "test3", "email": "test3@test.local"}
+  ]
+}

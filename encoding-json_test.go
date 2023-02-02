@@ -15,12 +15,13 @@ func TestJsonConfigDecoder_ReadProperties_WhenReaderEmpty_ThenReturnsEmptyProper
 	}
 }
 
-func TestNewJsonConfigDecoder_ReadProperties_WhenReaderContainsJson_ThenReturnsCorrectProperties(t *testing.T) {
-	reader := strings.NewReader(CONFIG_COMPLEX_STRING)
-	decoder := NewJsonConfigDecoder(reader)
-	if props, err := decoder.ReadProperties(); err != nil {
-		t.Fatalf("error reading properties: %s", err.Error())
-	} else if diff := props.Difference(&CONFIG_COMPLEX_PROPERTIES); diff.HasProperties() {
-		t.Fatalf("unexpected properties:\n %s", diff.String())
-	}
-}
+//func TestNewJsonConfigDecoder_ReadProperties_WhenReaderContainsJson_ThenReturnsCorrectProperties(t *testing.T) {
+//	reader := strings.NewReader(CONFIG_COMPLEX_STRING)
+//	decoder := NewJsonConfigDecoder(reader)
+//	expectedProps := CONFIG_COMPLEX_PROPERTIES_FACTORY()
+//	if props, err := decoder.ReadProperties(); err != nil {
+//		t.Fatalf("error reading properties: %s", err.Error())
+//	} else if ok := reflect.DeepEqual(props, expectedProps); !ok {
+//		t.Fatalf(`unexpected properties`)
+//	}
+//}

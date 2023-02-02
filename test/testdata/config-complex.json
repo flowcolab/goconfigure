@@ -19,8 +19,8 @@
     }
   },
   "emails": [
-    { "name":  "test1", "email": "test1@test.local"},
-    { "name":  "test2", "email": "test2@test.local"},
-    { "name":  "test3", "email": "test3@test.local"}
+    { "email": "test1@test.local", "name":  "test1"},
+    { "email": "test2@test.local", "name":  "test2"},
+    { "email": "test3@test.local", "name":  "test3"}
   ]
 }
